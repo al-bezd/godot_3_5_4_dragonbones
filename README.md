@@ -2,10 +2,12 @@
 
   `godot-dragonbones` is an effort to provide a full featured, free 2D Skeletal animation solution for Godot. In addition to improvements to the product itself; we also provide full engine builds and export templates.
 ___
- # Donate
-<img src="https://github.com/al-bezd/godot_dragonbones/assets/34810939/e4ff146c-f907-40c5-8a51-943ea2aed3ac" width="150" height="150">
+
+
+
+<img src="https://github.com/al-bezd/godot_3_5_4_dragonbones/assets/34810939/dea3b3b7-5206-4d48-b355-9612354e0302" width="150" height="150">
 <br>
-<img src="https://github.com/al-bezd/godot_dragonbones/assets/34810939/240691f8-b68b-400a-9fe8-bd36d5e64510" height="25">
+<img src="https://github.com/al-bezd/godot_3_5_4_dragonbones/assets/34810939/3168448e-1e38-410f-b992-86608642ed87" height="25">
 
  I did a lot of search work in order to find a solution for a stable version of godot + dragonbones, after unsuccessful searches I had to assemble it myself)) it was difficult and exciting, so I decided to ask you for donations, you will not lose anything and I will be pleased to know that these works will be useful to someone else, thanks you!
  
