@@ -1,80 +1,109 @@
-# Godot Engine
+# Godot Dragonbones
 
-<p align="center">
-  <a href="https://godotengine.org">
-    <img src="logo_outlined.svg" width="400" alt="Godot Engine logo">
-  </a>
-</p>
+  `godot-dragonbones` is an effort to provide a full featured, free 2D Skeletal animation solution for Godot. In addition to improvements to the product itself; we also provide full engine builds and export templates.
+___
+ # Donate
+<img src="https://github.com/al-bezd/godot_dragonbones/assets/34810939/e4ff146c-f907-40c5-8a51-943ea2aed3ac" width="150" height="150">
+<br>
+<img src="https://github.com/al-bezd/godot_dragonbones/assets/34810939/240691f8-b68b-400a-9fe8-bd36d5e64510" height="25">
 
-## 2D and 3D cross-platform game engine
+ I did a lot of search work in order to find a solution for a stable version of godot + dragonbones, after unsuccessful searches I had to assemble it myself)) it was difficult and exciting, so I decided to ask you for donations, you will not lose anything and I will be pleased to know that these works will be useful to someone else, thanks you!
+ 
+___
 
-**[Godot Engine](https://godotengine.org) is a feature-packed, cross-platform
-game engine to create 2D and 3D games from a unified interface.** It provides a
-comprehensive set of [common tools](https://godotengine.org/features), so that users can focus on making games
-without having to reinvent the wheel. Games can be exported with one click to a
-number of platforms, including the major desktop platforms (Linux, macOS,
-Windows), mobile platforms (Android, iOS), as well as Web-based platforms
-(HTML5) and
-[consoles](https://docs.godotengine.org/en/latest/tutorials/platform/consoles.html).
+## Getting Started
+https://www.godotdragonbones.com/gettingstarted
 
-## Free, open source and community-driven
+Use this resource as the main entry point into using Godot Dragonbones. From there, it should be easy enough to find additional resources.
 
-Godot is completely free and open source under the very permissive [MIT license](https://godotengine.org/license).
-No strings attached, no royalties, nothing. The users' games are theirs, down
-to the last line of engine code. Godot's development is fully independent and
-community-driven, empowering users to help shape their engine to match their
-expectations. It is supported by the [Software Freedom Conservancy](https://sfconservancy.org/)
-not-for-profit.
+If you have a more specialized question, our Discord server is the best place for you to reach the people using it the most. :)
+___
+### Supported Versions
+* Tested versions: Godot 3.5
+* DragonBones Pro 5.6
+* Unconfirmed: Blender Cutout Animation Tools
 
-Before being open sourced in [February 2014](https://github.com/godotengine/godot/commit/0b806ee0fc9097fa7bda7ac0109191c9c5e0a1ac),
-Godot had been developed by [Juan Linietsky](https://github.com/reduz) and
-[Ariel Manzur](https://github.com/punto-) (both still maintaining the project) for several
-years as an in-house engine, used to publish several work-for-hire titles.
+### Supported Platforms
+* Windows
+* HTML5
 
-![Screenshot of a 3D scene in the Godot Engine editor](https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg)
+### Compiling
+1. Clone repository
 
-## Getting the engine
-
-### Binary downloads
-
-Official binaries for the Godot editor and the export templates can be found
-[on the homepage](https://godotengine.org/download).
-
-### Compiling from source
-
-[See the official docs](https://docs.godotengine.org/en/latest/development/compiling/)
+2. [See the official docs](http://docs.godotengine.org/en/latest/development/compiling/)
 for compilation instructions for every supported platform.
+___
+##
+[![Sample](./sample.gif)]()
 
-## Community and contributing
+## Samples
 
-Godot is not only an engine but an ever-growing community of users and engine
-developers. The main community channels are listed [on the homepage](https://godotengine.org/community).
+#### Play/Stop animation
+```python
+var skeleton = get_node("skeleton")
 
-The best way to get in touch with the core engine developers is to join the
-[Godot Contributors Chat](https://chat.godotengine.org).
+# if needed set speed animation
+skeleton.set_speed(0.5)
 
-To get started contributing to the project, see the [contributing guide](CONTRIBUTING.md).
+# set current animation, if not choosed before
+skeleton.set("playback/curr_animation", "walk")
 
-## Documentation and demos
+# start play	
+skeleton.play()
 
-The official documentation is hosted on [ReadTheDocs](https://docs.godotengine.org).
-It is maintained by the Godot community in its own [GitHub repository](https://github.com/godotengine/godot-docs).
+# start play from time in sec
+skeleton.play_from_time(2);
 
-The [class reference](https://docs.godotengine.org/en/latest/classes/)
-is also accessible from the Godot editor.
+# start play from progress [0 - 1]
+skeleton.play_from_progress(0.5);
 
-We also maintain official demos in their own [GitHub repository](https://github.com/godotengine/godot-demo-projects)
-as well as a list of [awesome Godot community resources](https://github.com/godotengine/awesome-godot).
+#stop animation
+skeleton.stop()
 
-There are also a number of other
-[learning resources](https://docs.godotengine.org/en/latest/community/tutorials.html)
-provided by the community, such as text and video tutorials, demos, etc.
-Consult the [community channels](https://godotengine.org/community)
-for more information.
+#stop all animation
+skeleton.stop_all()
+```
 
-[![Actions Build Status](https://github.com/godotengine/godot/workflows/Godot/badge.svg?branch=master)](https://github.com/godotengine/godot/actions)
-[![Code Triagers Badge](https://www.codetriage.com/godotengine/godot/badges/users.svg)](https://www.codetriage.com/godotengine/godot)
-[![Translate on Weblate](https://hosted.weblate.org/widgets/godot-engine/-/godot/svg-badge.svg)](https://hosted.weblate.org/engage/godot-engine/?utm_source=widget)
-[![Total alerts on LGTM](https://img.shields.io/lgtm/alerts/g/godotengine/godot.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/godotengine/godot/alerts)
-[![TODOs](https://badgen.net/https/api.tickgit.com/badgen/github.com/godotengine/godot)](https://www.tickgit.com/browse?repo=github.com/godotengine/godot)
-"# godot_3_5_4_dragonbones" 
+#### Mixing(blending) animation
+```python
+var skeleton = get_node("skeleton")
+
+# if needed set speed animation
+skeleton.set_speed(0.5)
+
+# play animation by layers, see DragonBones documentation for parametrs
+skeleton.fade_in("idle", -1, -1, 2, "", GDDragonBones.FadeOut_All)
+# 1. "idle" 	-- The name animation.
+# 2. "-1" 	-- The fade in time. [-1: Use the default value of animation data, [0~N]: The fade in time (In seconds)] (Default: -1)
+# 3. "-1" 	-- playing repeat times. [-1: Use the default value of animation data, 0: No end loop playing, [1~N]: Repeat N times] (Default: -1)
+# 4. "2" 	-- The blending layer, the animation states in high level layer will get the blending weights with high priority, when the total blending weights are more than 1.0, there will be no more weights can be allocated to the other animation states. (Default: 0)
+# 5. "" 	-- The blending group name, it is typically used to specify the substitution of multiple animation states blending. (Default: null)
+# 6. GDDragonBones.FadeOut_All -- The fade out mode, which is typically used to specify alternate mode of multiple animation states blending. (Default: GDDragonBones.FadeOut_SameLayerAndGroup)
+#	GDDragonBones.FadeOut_None 		-- Do not fade out of any animation states.
+#	GDDragonBones.FadeOut_SameLayer 	-- Fade out the animation states of the same layer.
+#	GDDragonBones.FadeOut_SameGroup 	-- Fade out the animation states of the same group.
+#	GDDragonBones.FadeOut_SameLayerAndGroup -- Fade out the animation states of the same layer and group.
+#	GDDragonBones.FadeOut_All 		-- Fade out of all animation states.	
+#	GDDragonBones.FadeOut_Single  		-- Does not replace the animation state with the same name.
+#
+# skeleton.fade_in("walk", 0.3, 0, 0, "normalGroup", GDDragonBones.FadeOut_All)
+
+# run animation in "1" layer
+skeleton.fade_in("eyes_idle", -1, -1, 1, "", GDDragonBones.FadeOut_SameLayer)
+
+# stop specified animation by name
+skeleton.fade_out("eyes_idle")
+
+```
+
+#### Set pose from animation
+```python
+var skeleton = get_node("skeleton")
+
+# choose animation
+skeleton.set("playback/curr_animation", "idle")
+
+# seek animation [0.0-1.0]
+skeleton.seek(0.5)
+
+```
