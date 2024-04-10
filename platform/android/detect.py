@@ -169,9 +169,11 @@ def configure(env):
 
     # Disable exceptions and rtti on non-tools (template) builds
     if env["tools"]:
-        env.Append(CXXFLAGS=["-frtti"])
+        #env.Append(CXXFLAGS=["-frtti"])
+        env.Append(CXXFLAGS=["-fno-rtti"])
     else:
-        env.Append(CXXFLAGS=["-fno-rtti", "-fno-exceptions"])
+        #env.Append(CXXFLAGS=["-fno-rtti", "-fno-exceptions"])
+        #env.Append(CXXFLAGS=["-fno-rtti", "-fno-exceptions"])
         # Don't use dynamic_cast, necessary with no-rtti.
         env.Append(CPPDEFINES=["NO_SAFE_CAST"])
 
