@@ -27,6 +27,7 @@ ___
 
 ### Supported Platforms
 * Windows
+* Android
 * HTML5
 
 ### Compiling
